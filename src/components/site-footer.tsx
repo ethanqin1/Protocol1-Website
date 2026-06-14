@@ -1,5 +1,6 @@
 import Link from "next/link"
 
+import { Logo } from "@/components/logo"
 import { footerNav, siteConfig } from "@/lib/site"
 
 export function SiteFooter() {
@@ -7,11 +8,8 @@ export function SiteFooter() {
     <footer className="border-t border-border bg-muted/30">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-[1.5fr_repeat(3,1fr)]">
         <div className="space-y-3">
-          <Link href="/" className="flex items-center gap-2 font-semibold tracking-tight">
-            <span className="grid size-8 place-items-center rounded-lg bg-primary text-primary-foreground">
-              CR
-            </span>
-            {siteConfig.name}
+          <Link href="/" aria-label={`${siteConfig.name} home`}>
+            <Logo />
           </Link>
           <p className="max-w-xs text-sm text-muted-foreground">{siteConfig.tagline}</p>
         </div>
@@ -24,7 +22,7 @@ export function SiteFooter() {
                 <li key={link.title + link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                    className="text-sm text-muted-foreground transition-colors hover:text-primary"
                   >
                     {link.title}
                   </Link>
