@@ -21,7 +21,7 @@ export function PageHero({
     <section className={cn("border-b border-border bg-muted/30", className)}>
       <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         {eyebrow && (
-          <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-primary">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-[var(--accent-orange)]">
             {eyebrow}
           </p>
         )}

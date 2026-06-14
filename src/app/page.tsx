@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Activity, HardHat, LineChart, ShieldCheck } from "lucide-react";
+import { Activity, CheckCircle2, HardHat, LineChart, ShieldCheck } from "lucide-react";
 
 import { buttonVariants } from "@/components/ui/button";
 import { Section } from "@/components/page-shell";
@@ -35,7 +35,7 @@ export default function Home() {
       {/* Hero */}
       <section className="border-b border-border bg-muted/30">
         <div className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-primary">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-[var(--accent-orange)]">
             {siteConfig.tagline}
           </p>
           <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-balance sm:text-6xl">
@@ -64,7 +64,12 @@ export default function Home() {
       {/* Employer value props */}
       <Section>
         <div className="max-w-2xl">
-          <h2 className="text-3xl font-semibold tracking-tight">For employers</h2>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-[var(--accent-orange)]">
+            For employers
+          </p>
+          <h2 className="text-3xl font-semibold tracking-tight">
+            Fewer injuries, lower costs, a readier workforce
+          </h2>
           <p className="mt-3 text-muted-foreground">
             Reduce injuries, lower workers&apos; compensation costs, and improve workforce
             readiness across your organization.
@@ -86,11 +91,16 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Employee message */}
-      <section className="border-t border-border bg-muted/30">
+      {/* Employee message — blue accent for the employee audience */}
+      <section className="border-y border-border bg-[color-mix(in_oklch,var(--brand-blue),transparent_92%)]">
         <Section className="grid gap-8 lg:grid-cols-2 lg:items-center">
           <div>
-            <h2 className="text-3xl font-semibold tracking-tight">For employees</h2>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-[var(--accent-orange)]">
+              For employees
+            </p>
+            <h2 className="text-3xl font-semibold tracking-tight">
+              We&apos;ve got your back
+            </h2>
             <p className="mt-3 text-muted-foreground">
               Your employer and {siteConfig.name} are invested in helping you stay healthy,
               recover faster, and keep moving. Schedule an assessment, upload movement
@@ -99,7 +109,7 @@ export default function Home() {
             <div className="mt-6">
               <Link
                 href="/portal"
-                className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
+                className={cn(buttonVariants({ size: "lg" }))}
               >
                 Go to Employee Portal
               </Link>
@@ -114,8 +124,9 @@ export default function Home() {
             ].map((item) => (
               <li
                 key={item}
-                className="rounded-lg border border-border bg-card px-4 py-3"
+                className="flex items-center gap-3 rounded-lg border border-border bg-card px-4 py-3"
               >
+                <CheckCircle2 className="size-5 shrink-0 text-primary" />
                 {item}
               </li>
             ))}
@@ -125,6 +136,9 @@ export default function Home() {
 
       {/* Closing CTA */}
       <Section className="text-center">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-[var(--accent-orange)]">
+          Get started
+        </p>
         <h2 className="mx-auto max-w-2xl text-3xl font-semibold tracking-tight text-balance">
           Ready to see how {siteConfig.name} fits your workforce?
         </h2>

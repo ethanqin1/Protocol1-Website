@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Corporate Readiness",
+  name: "Afferent Influence",
   tagline: "We've Got Your Back",
   description:
     "Workforce readiness, injury prevention, and movement assessment — reducing injuries and workers' compensation costs while keeping employees healthy and moving.",
