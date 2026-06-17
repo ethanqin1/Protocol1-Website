@@ -30,8 +30,8 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary",
-                  active && "text-primary"
+                  "rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-primary",
+                  active && "bg-muted text-primary"
                 )}
               >
                 {item.title}
