@@ -61,19 +61,19 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="border-b border-border bg-muted/30">
-        <div className="mx-auto grid w-full max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 sm:py-28 lg:grid-cols-2">
+        <div className="mx-auto grid w-full max-w-6xl items-center gap-12 px-4 py-20 text-center sm:px-6 sm:py-28">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-sm font-medium text-muted-foreground">
               <span className="size-2 rounded-full bg-[var(--accent-orange)]" />
               {siteConfig.tagline}
             </span>
-            <h1 className="mt-6 text-4xl font-bold text-balance sm:text-5xl lg:text-6xl">
-              Workforce readiness and injury prevention, built for the people who do the work.
+            <h1 className="mt-6 text-4xl font-bold text-balance sm:text-5xl">
+              Efficient workforce readiness and injury prevention, personalized for businesses.
             </h1>
-            <p className="mt-6 max-w-xl text-lg text-muted-foreground text-pretty">
+            <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground text-pretty">
               {siteConfig.description}
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link
                 href={siteConfig.cta.primary.href}
                 className={cn(buttonVariants({ size: "lg" }))}
@@ -91,10 +91,10 @@ export default function Home() {
               Trusted by teams who can&apos;t afford downtime.
             </p>
           </div>
-          <ImagePlaceholder
+          {/*<ImagePlaceholder
             label="Hero image"
             className="aspect-[4/3] w-full lg:aspect-square"
-          />
+          />*/}
         </div>
       </section>
 

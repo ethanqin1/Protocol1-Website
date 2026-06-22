@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Afferent Influence",
   tagline: "We've Got Your Back",
   description:
-    "Workforce readiness, injury prevention, and movement assessment — reducing injuries and workers' compensation costs while keeping employees healthy and moving.",
+    "Suitable plans for businesses to keep their workers healthy and working by offering rehabilitation and injury prevention.",
   // Primary calls to action used across the marketing site.
   cta: {
     primary: { label: "Request a Demo", href: "/contact" },
